@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>area module</title>
+</head>
+
+<body>
+
+
+    <script type="module">
+
+
+        import {
+            area_circle,
+            area_rectangle,
+            area_cylinder
+        }                     
+         from "./Ques5-export.js";
+
+         let radius = 5;
+         let lenght = 10;
+         let breadth = 5;
+         let height = 15;
+
+
+        let circle = area_circle(radius);
+        let rectangle = area_rectangle(lenght,breadth);
+        let cylinder = area_cylinder(radius,height);
+
+    </script>
+</body>
+
+</html>
