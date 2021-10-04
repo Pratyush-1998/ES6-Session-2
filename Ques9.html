@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map and Set</title>
+</head>
+
+<body>
+
+
+    <script>
+        // Map
+        let map = new Map();
+
+        map.set('Pratyush', 'str1');
+        map.set(10, 'num1');
+        map.set(true, 'bool1');
+
+        console.log(map.get(10)); // 'num1'
+        console.log(map.get('Pratyush')); // 'str1'
+        console.log(map.get(true)); // 'bool1'
+        console.log(map.size); // 3
+
+        // iterate over keys 
+        for (let key of map.keys()) {
+            console.log(key);
+        }
+
+
+        // Set
+
+        let set = new Set();
+
+        let john = { name: "John" };
+        let pete = { name: "Pete" };
+        let mary = { name: "Mary" };
+
+        // visits, some users come multiple times
+        set.add(john);
+        set.add(pete);
+        set.add(mary);
+        set.add(john);
+        set.add(mary);
+
+        // set keeps only unique values
+        console.log(set.size); // 3
+
+        for (let user of set) {
+            console.log(user.name); 
+        }
+
+    </script>
+</body>
+
+</html>

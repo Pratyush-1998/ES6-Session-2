@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combination</title>
+</head>
+
+<body>
+
+
+    <script>
+        function combinationString() {
+            let str = 'sam';
+            let combinationArray = [];
+
+            for (i = 0; i < str.length; i++) {
+                for (j = i + 1; j <= str.length; j++) {
+                    combinationArray.push(str.slice(i, j));
+
+                }
+            }
+            console.log("Combination ", combinationArray);
+        }
+        combinationString()
+
+        var map = new Map();
+
+        map.set(1, 's');
+        map.set(2, 'sa');
+        map.set(3, 'sam');
+        map.set(4, 'a');
+        map.set(5, 'am');
+        map.set(6, 'm');
+
+        console.log(map.get(1));
+        console.log(map.get(2));
+        console.log(map.get(3));
+        console.log(map.get(4));
+        console.log(map.get(5));
+        console.log(map.get(6));
+
+    </script>
+</body>
+
+</html>

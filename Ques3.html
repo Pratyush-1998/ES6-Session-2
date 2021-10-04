@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+
+<body>
+
+
+    <script>
+        class Person {
+            constructor(name, id, city) {
+                this.name = name;
+                this.id = id;
+                this.city = city;
+
+            }
+       
+            static staticMethod() {
+                return "static method has been called"
+            }
+
+        }
+
+        let a = new Person("Pratyush", 4005, "Bangalore");
+        console.log(a);
+
+        class Employee extends Person {
+            constructor(name, id, city, experience, division) {
+                super(name, id, city);
+                this.experience = experience;
+                this.division = division;
+
+            }
+
+            static add(a, b) {
+                return `add two number ${a + b}`
+            }
+
+
+
+        }
+
+        let b = new Employee("Raj", 5911, "Delhi", 2015, "CSE");
+        console.log(b);
+
+        class Developer extends Employee {
+            constructor(name, id, city, experience, division, language) {
+                super(name, id, city, experience, division);
+                this.language = language
+            }
+        }
+        let c = new Developer("Rahul", 5910, "Gorakhpur", 2016, "IT", "javaScript");
+        console.log(c);
+    </script>
+</body>
+
+</html>
